@@ -7,142 +7,163 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonDecimal"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
+        android:id="@+id/buttonEqual"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="="
+        app:layout_constraintStart_toEndOf="@+id/buttonBackspace"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
-        android:background="@drawable/custom_button"
-        android:text="7"
+    <Button
+        android:id="@+id/buttonDecimal"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button7" />
 
     <Button
-        android:id="@+id/button20"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
-        android:text="8"
-        app:layout_constraintStart_toEndOf="@+id/buttonDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
-
-    <Button
-        android:id="@+id/button21"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
-        android:text="9"
-        app:layout_constraintStart_toEndOf="@+id/button20"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
-
-    <Button
-        android:id="@+id/buttonPlusMinus"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="156dp"
-        android:background="@drawable/custom_button"
-        android:text="+/-"
-        app:layout_constraintStart_toEndOf="@+id/buttonParenthesis"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
-        android:text="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
-
-    <Button
-        android:id="@+id/buttonClear"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="156dp"
-        android:background="@drawable/custom_button"
-        android:text="AC"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
-        android:text="8"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
-
-    <Button
-        android:id="@+id/buttonParenthesis"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="156dp"
-        android:background="@drawable/custom_button"
-        android:text="( )"
-        app:layout_constraintStart_toEndOf="@+id/buttonClear"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
-        android:text="6"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
-        android:text="5"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
-        android:text="9"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
-        android:text="2"
-        app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/buttonParenthesis" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
-        android:text="3"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPlusMinus" />
-
-    <Button
         android:id="@+id/button4"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <Button
+        android:id="@+id/button6"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="6"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/buttonZero"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/buttonDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/buttonBackspace"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="Back"
+        app:layout_constraintStart_toEndOf="@+id/buttonZero"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="8"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/upperButtonPaddingTop"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/buttonPlusMinus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/upperButtonPaddingTop"
+        android:text="AC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPlusMinus"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/upperButtonPaddingTop"
+        android:text="+/-"
+        app:layout_constraintStart_toEndOf="@+id/buttonParenthesis"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonParenthesis"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/upperButtonPaddingTop"
+        android:text="( )"
+        app:layout_constraintStart_toEndOf="@+id/buttonClear"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonParenthesis" />
+
+    <Button
+        android:id="@+id/button9"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="9"
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="5"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/buttonDivide"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="/"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubtract" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlusMinus" />
+
+    <Button
         android:id="@+id/button7"
-        android:layout_width="75dp"
-        android:layout_height="99dp"
-        android:background="@drawable/custom_button"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/buttonSubtract"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+
+    <Button
+        android:id="@+id/buttonMultiply"
+        style="@style/RectangleButton"
+        android:layout_marginTop="@dimen/buttonPaddingTop"
+        android:text="*"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
