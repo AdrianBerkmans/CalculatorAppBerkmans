@@ -6,13 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textViewOutput"
+        android:layout_width="@dimen/textViewWidth"
+        android:layout_height="@dimen/textViewHeight"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Output"
+        android:textAlignment="center"
+        android:textSize="@dimen/textViewTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrevious"
+        />
+
+    <TextView
+        android:id="@+id/textViewPrevious"
+        android:layout_width="@dimen/textViewWidth"
+        android:layout_height="@dimen/textViewHeight"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp"
+        android:text="Last output"
+        android:textAlignment="center"
+        android:textColor="#AAAAAA"
+        android:textSize="@dimen/textViewTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/buttonEqual"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="="
         app:layout_constraintStart_toEndOf="@+id/buttonBackspace"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonDivide"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/buttonDecimal"
@@ -20,7 +48,9 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/button4"
@@ -28,7 +58,9 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/button6"
@@ -36,7 +68,9 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="6"
         app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/buttonZero"
@@ -44,7 +78,9 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="0"
         app:layout_constraintStart_toEndOf="@+id/buttonDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/buttonBackspace"
@@ -52,7 +88,8 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="Back"
         app:layout_constraintStart_toEndOf="@+id/buttonZero"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        android:foreground="?attr/selectableItemBackground"/>
 
     <Button
         android:id="@+id/button1"
@@ -60,7 +97,10 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonClear"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        />
 
     <Button
         android:id="@+id/button8"
@@ -68,7 +108,10 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="8"
         app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        />
 
     <Button
         android:id="@+id/buttonPlus"
@@ -76,7 +119,8 @@
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
         android:text="+"
         app:layout_constraintStart_toEndOf="@+id/buttonPlusMinus"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:foreground="?attr/selectableItemBackground"/>
 
     <Button
         android:id="@+id/buttonClear"
@@ -84,7 +128,8 @@
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
         android:text="AC"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:foreground="?attr/selectableItemBackground"/>
 
     <Button
         android:id="@+id/buttonPlusMinus"
@@ -92,7 +137,8 @@
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
         android:text="+/-"
         app:layout_constraintStart_toEndOf="@+id/buttonParenthesis"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:foreground="?attr/selectableItemBackground"/>
 
     <Button
         android:id="@+id/buttonParenthesis"
@@ -100,7 +146,8 @@
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
         android:text="( )"
         app:layout_constraintStart_toEndOf="@+id/buttonClear"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:foreground="?attr/selectableItemBackground"/>
 
     <Button
         android:id="@+id/button2"
@@ -108,7 +155,9 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="2"
         app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/buttonParenthesis" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonParenthesis"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/button9"
@@ -116,7 +165,10 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="9"
         app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+       />
 
     <Button
         android:id="@+id/button5"
@@ -124,7 +176,9 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="5"
         app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/buttonDivide"
@@ -132,7 +186,10 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="/"
         app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSubtract" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubtract"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        />
 
     <Button
         android:id="@+id/button3"
@@ -140,7 +197,9 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="3"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPlusMinus" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlusMinus"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/button7"
@@ -148,7 +207,10 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
+
 
     <Button
         android:id="@+id/buttonSubtract"
@@ -156,7 +218,9 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="-"
         app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/buttonMultiply"
@@ -164,6 +228,9 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="*"
         app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlus"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
