@@ -8,7 +8,7 @@
     <style name="Theme.CalculatorAppBerkmans" parent="Base.Theme.CalculatorAppBerkmans" />
 
     <style name="RectangleButton">
-        <item name= "android:layout_width">98dp</item>
+        <item name= "android:layout_width">102.667dp</item>
         <item name= "android:layout_height">99dp</item>
         <item name= "android:background">@drawable/custom_button</item>
     </style>

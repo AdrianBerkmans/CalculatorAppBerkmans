@@ -2,7 +2,7 @@
 <resources>
     <dimen name = "buttonPaddingSides">0dp</dimen>
     <dimen name = "buttonPaddingTop">0dp</dimen>
-    <dimen name = "upperButtonPaddingTop">290dp</dimen>
+    <dimen name = "upperButtonPaddingTop">236dp</dimen>
     <dimen name = "textViewHeight">72dp</dimen>
     <dimen name = "textViewWidth">308dp</dimen>
     <dimen name = "textViewTextSize">50sp</dimen>

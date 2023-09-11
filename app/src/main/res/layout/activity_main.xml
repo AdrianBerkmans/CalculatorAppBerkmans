@@ -11,13 +11,12 @@
         android:layout_width="@dimen/textViewWidth"
         android:layout_height="@dimen/textViewHeight"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:text="Output"
+        android:layout_marginTop="16dp"
+        android:text=""
         android:textAlignment="center"
         android:textSize="@dimen/textViewTextSize"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPrevious"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrevious" />
 
     <TextView
         android:id="@+id/textViewPrevious"
@@ -25,7 +24,7 @@
         android:layout_height="@dimen/textViewHeight"
         android:layout_marginStart="40dp"
         android:layout_marginTop="52dp"
-        android:text="Last output"
+        android:text=""
         android:textAlignment="center"
         android:textColor="#AAAAAA"
         android:textSize="@dimen/textViewTextSize"
