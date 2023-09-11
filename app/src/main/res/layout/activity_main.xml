@@ -24,13 +24,24 @@
         android:layout_height="@dimen/textViewHeight"
         android:layout_marginStart="40dp"
         android:layout_marginTop="52dp"
+        android:text="yo"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textViewTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textViewPreviousDisplay"
+        android:layout_width="@dimen/textViewWidth"
+        android:layout_height="@dimen/textViewHeight"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp"
         android:text=""
         android:textAlignment="center"
         android:textColor="#AAAAAA"
         android:textSize="@dimen/textViewTextSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/buttonEqual"
         style="@style/RectangleButton"
@@ -135,15 +146,15 @@
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
         android:text="+/-"
-        app:layout_constraintStart_toEndOf="@+id/buttonParenthesis"
+        app:layout_constraintStart_toEndOf="@+id/buttonSquare"
         app:layout_constraintTop_toTopOf="parent"
         android:foreground="?attr/selectableItemBackground"/>
 
     <Button
-        android:id="@+id/buttonParenthesis"
+        android:id="@+id/buttonSquare"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
-        android:text="( )"
+        android:text="^2"
         app:layout_constraintStart_toEndOf="@+id/buttonClear"
         app:layout_constraintTop_toTopOf="parent"
         android:foreground="?attr/selectableItemBackground"/>
@@ -154,7 +165,7 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="2"
         app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/buttonParenthesis"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSquare"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"/>
 
@@ -230,6 +241,8 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonPlus"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
