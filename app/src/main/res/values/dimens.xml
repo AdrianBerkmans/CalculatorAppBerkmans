@@ -7,4 +7,5 @@
     <dimen name = "textViewWidth">308dp</dimen>
     <dimen name = "textViewTextSize1">50sp</dimen>
     <dimen name = "textViewTextSize2">25sp</dimen>
+    <dimen name = "buttonTextSize">35sp</dimen>
 </resources>

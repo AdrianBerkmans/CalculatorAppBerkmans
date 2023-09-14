@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">CalculatorAppBerkmans</string>
+    <string name="app_name">Calculator</string>
+    <string name="title">Calulator By Adrian</string>
+    <string name="Back"> Back </string>
+
 </resources>

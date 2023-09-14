@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             //"Modifiers"
-            if(!(Output.getText().toString().contains("/")||Output.getText().toString().contains("*")||Output.getText().toString().contains("+")||Output.getText().toString().contains("-")||Output.getText().toString().contains("^2"))){
+            if(!(Output.getText().toString().contains("/")||Output.getText().toString().contains("*")||Output.getText().toString().contains("+")||Output.getText().toString().contains("-")||Output.getText().toString().contains("^"))){
                 if(CurId == R.id.buttonPlus){
                     Equation = "+";
                     Output.setText(Previous.getText()+Equation);
@@ -146,13 +146,13 @@ public class MainActivity extends AppCompatActivity {
                     Equation = "^2";
                     Output.setText(Previous.getText()+Equation);
                     Previous.setText("");
-                    lastPress = "odd";
+                    lastPress = "opp";
                 }
                 else if(CurId == R.id.buttonExponent){
                     Equation = "^";
                     Output.setText(Previous.getText()+Equation);
                     Previous.setText("");
-                    lastPress = "odd";
+                    lastPress = "opp";
 
                 }
             }
