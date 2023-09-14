@@ -13,8 +13,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:text=""
-        android:textAlignment="center"
-        android:textSize="@dimen/textViewTextSize"
+        android:textAlignment="viewEnd"
+        android:textSize="@dimen/textViewTextSize1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPrevious" />
 
@@ -26,8 +26,8 @@
         android:layout_marginTop="52dp"
         android:text="yo"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="@dimen/textViewTextSize"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/textViewTextSize2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
@@ -37,9 +37,9 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="52dp"
         android:text=""
-        android:textAlignment="center"
+        android:textAlignment="viewEnd"
         android:textColor="#AAAAAA"
-        android:textSize="@dimen/textViewTextSize"
+        android:textSize="@dimen/textViewTextSize2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
@@ -129,7 +129,7 @@
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
         android:text="+"
-        app:layout_constraintStart_toEndOf="@+id/buttonPlusMinus"
+        app:layout_constraintStart_toEndOf="@+id/buttonExponent"
         app:layout_constraintTop_toTopOf="parent"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"/>
@@ -145,10 +145,10 @@
         android:onClick="onClick"/>
 
     <Button
-        android:id="@+id/buttonPlusMinus"
+        android:id="@+id/buttonExponent"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
-        android:text="+/-"
+        android:text="^"
         app:layout_constraintStart_toEndOf="@+id/buttonSquare"
         app:layout_constraintTop_toTopOf="parent"
         android:foreground="?attr/selectableItemBackground"
@@ -212,7 +212,7 @@
         android:layout_marginTop="@dimen/buttonPaddingTop"
         android:text="3"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPlusMinus"
+        app:layout_constraintTop_toBottomOf="@+id/buttonExponent"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"/>
 

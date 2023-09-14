@@ -5,5 +5,6 @@
     <dimen name = "upperButtonPaddingTop">236dp</dimen>
     <dimen name = "textViewHeight">72dp</dimen>
     <dimen name = "textViewWidth">308dp</dimen>
-    <dimen name = "textViewTextSize">50sp</dimen>
+    <dimen name = "textViewTextSize1">50sp</dimen>
+    <dimen name = "textViewTextSize2">25sp</dimen>
 </resources>

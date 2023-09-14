@@ -25,130 +25,142 @@ public class MainActivity extends AppCompatActivity {
         TextView PreviousDisplay = findViewById(R.id.textViewPreviousDisplay);
         Previous.setText(Output.getText().toString());
         String Equation = "";
-        if(lastPress=="eq"){
+        try{if(lastPress=="eq"){
             PreviousDisplay.setText(Output.getText());
             Previous.setText("");
             Output.setText("");
         }
-        int CurId = v.getId();
-        if(CurId == R.id.buttonZero){
-            Equation = "0";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.button1){
-            Equation = "1";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.button2){
-            Equation = "2";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.button3){
-            Equation = "3";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.button4){
-            Equation = "4";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.button5){
-            Equation = "5";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.button6){
-            Equation = "6";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.button7){
-            Equation = "7";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.button8){
-            Equation = "8";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.button9){
-            Equation = "9";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.buttonDecimal){
-            Equation = ".";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "num";
-        }
-        else if(CurId == R.id.buttonPlusMinus){
-            Previous.setText("");
-            lastPress = "opp";
-            isNeg = !isNeg;
-        }
-        else if(CurId == R.id.buttonEqual){
-            PreviousDisplay.setText(Output.getText().toString());
-            Output.setText("");
-            Previous.setText("");
-            Equation = calculateAnswer(PreviousDisplay.getText().toString());
-            Output.setText(Previous.getText()+Equation);
-            lastPress = "eq";
-
-        }
-        else if(CurId == R.id.buttonBackspace){
-            Output.setText(Output.getText().toString().substring(0,Output.length()-1));
-            lastPress = "num";
-        }
-
-        //"Modifiers"
-        if(!(Output.getText().toString().contains("/")||Output.getText().toString().contains("*")||Output.getText().toString().contains("+")||Output.getText().toString().contains("-")||Output.getText().toString().contains("^2"))){
-            if(CurId == R.id.buttonPlus){
-                Equation = "+";
-                Output.setText(Previous.getText()+Equation);
-                Previous.setText("");
-                lastPress = "opp";
+            int CurId = v.getId();
+            if(CurId == R.id.buttonClear){
+                Output.setText("");
+                PreviousDisplay.setText("");
             }
-            else if(CurId == R.id.buttonSubtract){
-                Equation = "-";
+            else if(CurId == R.id.buttonZero){
+                Equation = "0";
                 Output.setText(Previous.getText()+Equation);
                 Previous.setText("");
-                lastPress = "opp";
+                lastPress = "num";
             }
-            else if(CurId == R.id.buttonMultiply){
-                Equation = "*";
+            else if(CurId == R.id.button1){
+                Equation = "1";
                 Output.setText(Previous.getText()+Equation);
                 Previous.setText("");
-                lastPress = "opp";
+                lastPress = "num";
             }
-            else if(CurId == R.id.buttonDivide){
-                Equation = "/";
+            else if(CurId == R.id.button2){
+                Equation = "2";
                 Output.setText(Previous.getText()+Equation);
                 Previous.setText("");
-                lastPress = "opp";
+                lastPress = "num";
             }
-            else if(CurId == R.id.buttonSquare){
-                Equation = "^2";
+            else if(CurId == R.id.button3){
+                Equation = "3";
                 Output.setText(Previous.getText()+Equation);
                 Previous.setText("");
-                lastPress = "odd";
+                lastPress = "num";
+            }
+            else if(CurId == R.id.button4){
+                Equation = "4";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "num";
+            }
+            else if(CurId == R.id.button5){
+                Equation = "5";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "num";
+            }
+            else if(CurId == R.id.button6){
+                Equation = "6";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "num";
+            }
+            else if(CurId == R.id.button7){
+                Equation = "7";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "num";
+            }
+            else if(CurId == R.id.button8){
+                Equation = "8";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "num";
+            }
+            else if(CurId == R.id.button9){
+                Equation = "9";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "num";
+            }
+            else if(CurId == R.id.buttonDecimal){
+                Equation = ".";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "num";
             }
 
+            else if(CurId == R.id.buttonEqual){
+                PreviousDisplay.setText(Output.getText().toString());
+                Output.setText("");
+                Previous.setText("");
+                Equation = calculateAnswer(PreviousDisplay.getText().toString());
+                Output.setText(Previous.getText()+Equation);
+                lastPress = "eq";
+
+            }
+            else if(CurId == R.id.buttonBackspace){
+                Output.setText(Output.getText().toString().substring(0,Output.length()-1));
+                lastPress = "num";
+            }
+
+            //"Modifiers"
+            if(!(Output.getText().toString().contains("/")||Output.getText().toString().contains("*")||Output.getText().toString().contains("+")||Output.getText().toString().contains("-")||Output.getText().toString().contains("^2"))){
+                if(CurId == R.id.buttonPlus){
+                    Equation = "+";
+                    Output.setText(Previous.getText()+Equation);
+                    Previous.setText("");
+                    lastPress = "opp";
+                }
+                else if(CurId == R.id.buttonSubtract){
+                    Equation = "-";
+                    Output.setText(Previous.getText()+Equation);
+                    Previous.setText("");
+                    lastPress = "opp";
+                }
+                else if(CurId == R.id.buttonMultiply){
+                    Equation = "*";
+                    Output.setText(Previous.getText()+Equation);
+                    Previous.setText("");
+                    lastPress = "opp";
+                }
+                else if(CurId == R.id.buttonDivide){
+                    Equation = "/";
+                    Output.setText(Previous.getText()+Equation);
+                    Previous.setText("");
+                    lastPress = "opp";
+                }
+                else if(CurId == R.id.buttonSquare){
+                    Equation = "^2";
+                    Output.setText(Previous.getText()+Equation);
+                    Previous.setText("");
+                    lastPress = "odd";
+                }
+                else if(CurId == R.id.buttonExponent){
+                    Equation = "^";
+                    Output.setText(Previous.getText()+Equation);
+                    Previous.setText("");
+                    lastPress = "odd";
+
+                }
+            }
+        }
+        catch(Exception e){
+            Output.setText("NaN");
+            PreviousDisplay.setText("");
+            Previous.setText("");
         }
 
     }
@@ -182,6 +194,9 @@ public class MainActivity extends AppCompatActivity {
         else if (input.contains("-")) {
             modLocation = input.indexOf("-");
             mod = "-";
+        }else if (input.contains("^")) {
+            modLocation = input.indexOf("^");
+            mod = "^";
         }
         else{return input;}
 
@@ -197,11 +212,11 @@ public class MainActivity extends AppCompatActivity {
         if(mod == "+"){
             solution = num1+num2;
         }
-        if(mod == "`-`"){
+        if(mod == "-"){
             solution = num1-num2;
         }
-        if(isNeg){
-            solution = solution * -1;
+        if(mod == "^"){
+            solution = Math.pow(num1,num2);
         }
         int result1 = (int)solution;
 
