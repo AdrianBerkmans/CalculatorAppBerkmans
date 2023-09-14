@@ -31,7 +31,13 @@ public class MainActivity extends AppCompatActivity {
             Output.setText("");
         }
         int CurId = v.getId();
-        if(CurId == R.id.button1){
+        if(CurId == R.id.buttonZero){
+            Equation = "0";
+            Output.setText(Previous.getText()+Equation);
+            Previous.setText("");
+            lastPress = "num";
+        }
+        else if(CurId == R.id.button1){
             Equation = "1";
             Output.setText(Previous.getText()+Equation);
             Previous.setText("");
@@ -91,45 +97,6 @@ public class MainActivity extends AppCompatActivity {
             Previous.setText("");
             lastPress = "num";
         }
-
-
-        //"Modifiers"
-        else if(CurId == R.id.buttonPlus){
-            Equation = "+";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "opp";
-        }
-        else if(CurId == R.id.buttonSubtract){
-            Equation = "-";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "opp";
-        }
-        else if(CurId == R.id.buttonMultiply){
-            Equation = "*";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "opp";
-        }
-        else if(CurId == R.id.buttonDivide){
-            Equation = "/";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "opp";
-        }
-        else if(CurId == R.id.buttonPlusMinus){
-            Equation = calculateAnswer(Output.getText().toString());
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "opp";
-        }
-        else if(CurId == R.id.buttonSquare){
-            Equation = "^2";
-            Output.setText(Previous.getText()+Equation);
-            Previous.setText("");
-            lastPress = "odd";
-        }
         else if(CurId == R.id.buttonPlusMinus){
             Previous.setText("");
             lastPress = "opp";
@@ -145,10 +112,45 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else if(CurId == R.id.buttonBackspace){
-            Output.setText(Output.getText().subSequence(0,Output.length()-1));
-            lastPress = "opp";
+            Output.setText(Output.getText().toString().substring(0,Output.length()-1));
+            lastPress = "num";
+        }
+
+        //"Modifiers"
+        if(!(Output.getText().toString().contains("/")||Output.getText().toString().contains("*")||Output.getText().toString().contains("+")||Output.getText().toString().contains("-")||Output.getText().toString().contains("^2"))){
+            if(CurId == R.id.buttonPlus){
+                Equation = "+";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "opp";
+            }
+            else if(CurId == R.id.buttonSubtract){
+                Equation = "-";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "opp";
+            }
+            else if(CurId == R.id.buttonMultiply){
+                Equation = "*";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "opp";
+            }
+            else if(CurId == R.id.buttonDivide){
+                Equation = "/";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "opp";
+            }
+            else if(CurId == R.id.buttonSquare){
+                Equation = "^2";
+                Output.setText(Previous.getText()+Equation);
+                Previous.setText("");
+                lastPress = "odd";
+            }
 
         }
+
     }
     public String calculateAnswer(String input){
         String mod = "";
@@ -158,11 +160,10 @@ public class MainActivity extends AppCompatActivity {
         double solution = 0.0;
         if (input.contains("^2")) {
             modLocation = input.indexOf("^2");
-            mod = "^2";
             double result = parseDouble(input.substring(0,modLocation));
             result = result*result;
-            if(isNeg){return  "NaN";}
-            return Double.toString(result);
+            if(modLocation<input.length()-2){return "NaN";}
+            return result+"";
         }
         else if (input.length()<3 &&(input.contains("/")||input.contains("*")||input.contains("+")||input.contains("-"))){
             return "NaN";
@@ -201,6 +202,11 @@ public class MainActivity extends AppCompatActivity {
         }
         if(isNeg){
             solution = solution * -1;
+        }
+        int result1 = (int)solution;
+
+        if((double)result1 == solution){
+            return Integer.toString(result1);
         }
         return Double.toString(solution);
     }
