@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -30,6 +29,7 @@
         android:textSize="@dimen/textViewTextSize2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textViewPreviousDisplay"
         android:layout_width="@dimen/textViewWidth"
@@ -42,231 +42,228 @@
         android:textSize="@dimen/textViewTextSize2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/buttonEqual"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="="
-        app:layout_constraintStart_toEndOf="@+id/buttonBackspace"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDivide"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="="
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/buttonBackspace"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
     <Button
         android:id="@+id/buttonDecimal"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="."
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="."
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
 
 
     <Button
         android:id="@+id/button4"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="4"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <Button
         android:id="@+id/button6"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="6"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="6"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <Button
         android:id="@+id/buttonZero"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@+id/buttonDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/button8"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="0"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/buttonDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <Button
         android:id="@+id/buttonBackspace"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="@string/Back"
-        app:layout_constraintStart_toEndOf="@+id/buttonZero"
-        app:layout_constraintTop_toBottomOf="@+id/button9"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="20dp"/>
+        android:text="@string/Back"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/buttonZero"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
 
     <Button
         android:id="@+id/button1"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonClear"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
+        android:text="1"
         android:textSize="@dimen/buttonTextSize"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
 
     <Button
         android:id="@+id/button8"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="8"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
+        android:text="8"
         android:textSize="@dimen/buttonTextSize"
-        />
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <Button
         android:id="@+id/buttonPlus"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
-        android:text="+"
-        app:layout_constraintStart_toEndOf="@+id/buttonExponent"
-        app:layout_constraintTop_toTopOf="parent"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="+"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/buttonExponent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonClear"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
-        android:text="AC"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="AC"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonExponent"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
-        android:text="^"
-        app:layout_constraintStart_toEndOf="@+id/buttonSquare"
-        app:layout_constraintTop_toTopOf="parent"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="^"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/buttonSquare"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonSquare"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/upperButtonPaddingTop"
-        android:text="^2"
-        app:layout_constraintStart_toEndOf="@+id/buttonClear"
-        app:layout_constraintTop_toTopOf="parent"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="^2"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/buttonClear"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="2"
-        app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSquare"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="2"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSquare" />
 
     <Button
         android:id="@+id/button9"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="9"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/button6"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
+        android:text="9"
         android:textSize="@dimen/buttonTextSize"
-       />
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <Button
         android:id="@+id/button5"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="5"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="5"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/buttonDivide"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="/"
-        app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSubtract"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
+        android:text="/"
         android:textSize="@dimen/buttonTextSize"
-        />
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubtract" />
 
     <Button
         android:id="@+id/button3"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="3"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonExponent"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="3"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonExponent" />
 
     <Button
         android:id="@+id/button7"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="7"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
 
     <Button
         android:id="@+id/buttonSubtract"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="-"
-        app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="-"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
 
     <Button
         android:id="@+id/buttonMultiply"
         style="@style/RectangleButton"
         android:layout_marginTop="@dimen/buttonPaddingTop"
-        android:text="*"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPlus"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onClick"
-        android:textSize="@dimen/buttonTextSize"/>
+        android:text="*"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
 
     <TextView
         android:id="@+id/textView"
